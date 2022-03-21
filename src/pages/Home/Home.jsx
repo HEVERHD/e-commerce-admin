@@ -17,7 +17,6 @@ import ProductContainer from './productContainer/ProductContainer';
 const Home = ()=>{
       const dispatch = useDispatch();
       const token = useSelector( state => state.currentUser.accessToken)
-
       //Buscamos todos los productos creados
       useEffect(()=>{
             dispatch( getAllProducts(token) )
