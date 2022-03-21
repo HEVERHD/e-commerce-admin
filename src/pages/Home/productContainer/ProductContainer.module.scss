@@ -1,0 +1,23 @@
+.container{
+      height: 50px;
+      overflow: hidden;
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 30px;
+      text-align: center;
+      border: 1px  solid rgb(134, 134, 134);
+
+      h1{
+            font-size: 15px;
+      }
+
+      .buttonContainer{
+            display: flex;
+            position: absolute;
+            right: 2px;
+            top: 6px;
+            gap: 6px;
+            grid-column-start: 6;
+      }
+}
