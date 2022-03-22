@@ -6,19 +6,22 @@ import style from './Home.module.scss';
 //COMPONENTES
 import Sidebar from "../../components/SideBar/Sidebar";
 import ProductContainer from './productContainer/ProductContainer';
+import {Button} from '@mui/material'
+import { useNavigate } from "react-router-dom";
 
 const pageSize = 10 // Para cambiar el tamaño del paginado
 
 const Home = ()=>{
+      const navigate = useNavigate();
       const [page, setPage] = useState(0);
       const dispatch = useDispatch();
-      const token = useSelector( state => state.currentUser.accessToken)
+      const token = useSelector( state => state.currentUser.accessToken);
       //Buscamos todos los productos creados
       useEffect(()=>{
-            dispatch( getAllProducts(token) )
+            dispatch( getAllProducts(token) );
       },[])
 
-      const products = useSelector(state => state.allProducts)
+      const products = useSelector(state => state.allProducts);
 
 
       return (
@@ -61,8 +64,8 @@ const Home = ()=>{
                                     Next
                               </button>
                         </div>
+                        <Button variant="contained" onClick={()=> navigate('/create/product')}>Crear publicacion</Button>
                   </div>
-
 
             </div>
       )
