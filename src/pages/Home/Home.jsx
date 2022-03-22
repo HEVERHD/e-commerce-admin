@@ -7,13 +7,6 @@ import style from './Home.module.scss';
 import Sidebar from "../../components/SideBar/Sidebar";
 import ProductContainer from './productContainer/ProductContainer';
 
-/*
-      Listado de los ultimos 10 productos creados, con opcion para ver todos
-      Páginado que muestre 20 por página
-      Opción de editar productos al tocar en el
-      Opcion de crear más productos
-*/
-
 const pageSize = 10 // Para cambiar el tamaño del paginado
 
 const Home = ()=>{

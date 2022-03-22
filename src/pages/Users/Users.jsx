@@ -95,7 +95,7 @@ const Users = ()=>{
                                           </div>
                                     </div>
                                     
-                              })};
+                              })}
 
                               <div className={style.pag}>
                                     <button type='button' onClick={()=>{
