@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 //COMPONENTES
 import baseURL from '../../config/baseUrl';
 import {notifyError, notifySuccess} from '../../utils/notifications'
-import {TextField, Button} from '@mui/material'
+import {TextField, Button, ButtonGroup} from '@mui/material'
 
 import style from './Product.modules.css';
 
@@ -88,8 +88,9 @@ const Product = ()=>{
                   <div className='container_for_img'>
                   <div className='img_txt'>
                   <img className='img_prod' src={details.image}/>
+                  <p>Categorias</p>
                   {details.categories.map(item =>{
-                        return <h5 className='txt_til' key={item.name}>Categoria:{item.name}</h5>
+                        return <h5 className='txt_til' key={item.name}>{item.name}</h5>
                   })}
                   <h3 className='txt_til'>Sales : {details.sales}</h3>
                   </div>
