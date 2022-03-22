@@ -1,0 +1,30 @@
+.container_sideBar{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      color: blue;
+      background-image: url('https://www.ainia.es/wp-content/uploads/2021/12/tecnologia-2.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 200px;
+      width: 100%;
+      gap: 10px;
+      margin-top: 0px;
+      margin-bottom: 30px;
+      align-items: center;
+      box-shadow: 1px 2px 10px black;
+}
+
+.btn_mui{
+      margin: 20px !important;
+      color:rgb(9, 9, 138) !important;
+      background-color: rgba(198, 201, 243, 0.356) !important;
+      transition: all ease-in-out 0.5s;
+      border-color: rgb(9, 9, 138) !important;
+}
+.btn_mui:hover{
+      color:rgb(195, 195, 223) !important;
+      background-color: rgba(9, 14, 87, 0.356) !important;
+      border-color: rgb(195, 195, 223) !important;
+}

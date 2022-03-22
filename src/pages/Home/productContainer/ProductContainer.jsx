@@ -25,17 +25,17 @@ const ProductContainer = ( {id, title, price, stock, sales, discount, token} )=>
 
       return(
             <div key={id} className={style.container} >
-                  <h1> {titleEdit}... </h1>
-                  <h1> $ {price} </h1>
-                  <h1> {stock} </h1>
-                  <h1> {sales} </h1>
-                  <h1> {discount} </h1>
+                  <h1 className={style.txt}> {titleEdit } </h1>
+                  <h1 className={style.txt}> $ {price} </h1>
+                  <h1 className={style.txt}> {stock} </h1>
+                  <h1 className={style.txt}> {sales} </h1>
+                  <h1 className={style.txt}> %{discount} </h1>
 
                   <div className={style.buttonContainer}>
-                        <Button variant='contained' color='error' onClick={ deleteItem }>
+                        <Button className={style.btn_home} variant='contained' color='error' onClick={ deleteItem }>
                               <DeleteIcon />
                         </Button>
-                        <Button variant='contained' color='success' onClick={()=>  navigate(`/product/${id}`)}>
+                        <Button className={style.btn_home} variant='contained' color='success' onClick={()=>  navigate(`/product/${id}`)}>
                               <EditIcon />
                         </Button>
 

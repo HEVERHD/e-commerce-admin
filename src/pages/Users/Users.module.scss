@@ -48,13 +48,23 @@
     
         .edit{
             span{
-                background-color: rgb(30, 230, 30);
+                background: linear-gradient(to bottom, rgb(78, 72, 233),rgb(67, 67, 71)) !important;
+                transition: all ease-in 0.5s;
+                margin: 10px;
+            }
+            span:hover{
+                background: linear-gradient(to bottom, rgb(193, 193, 207),rgb(7, 7, 107)) !important;
             }
         }
     
         .erase{
             span{
-                background-color: rgb(255, 47, 47);
+                background: linear-gradient(to bottom, rgb(78, 72, 233),rgb(67, 67, 71)) !important;
+                transition: all ease-in 0.5s;
+                margin: 10px;
+            }
+            span:hover{
+                background: linear-gradient(to bottom, rgb(193, 193, 207),rgb(7, 7, 107)) !important;
             }
         }
     }

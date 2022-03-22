@@ -1,0 +1,32 @@
+.containerHome{
+    background-color: rgba(222, 233, 231, 0.178);
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+}
+.productsContainer{
+           width: 70%;
+           background-color: rgba(120, 231, 211, 0.308);
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+           border-radius: 5px;
+           font-family:monospace;
+           color: rgba(6, 6, 14, 0.822);
+}
+.categories{
+ display: grid;
+ grid-template-columns: repeat(6, 1fr);
+text-align: start;
+width: 100%;
+gap: 10px;
+background: linear-gradient(to bottom, rgb(78, 72, 233),rgb(67, 67, 71));
+}
+.txt_categorias{
+    font-size: 20px;
+    margin-left: 10px;
+    font-family:'Courier New', Courier, monospace;
+    color: #dcdce6d2;
+}
