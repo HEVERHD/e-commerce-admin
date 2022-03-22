@@ -1,23 +1,37 @@
 .container{
-      height: 50px;
+      height: 90px;
       overflow: hidden;
       position: relative;
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      gap: 30px;
+      gap: 20px;
       text-align: center;
       border: 1px  solid rgb(134, 134, 134);
-
-      h1{
-            font-size: 15px;
-      }
+      padding: 20px;
+      margin-bottom: 10px;
 
       .buttonContainer{
             display: flex;
-            position: absolute;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
             right: 2px;
             top: 6px;
             gap: 6px;
             grid-column-start: 6;
       }
+}
+.txt{
+      margin-top: 0px;
+      padding-top: 10px;
+      font-size: 14px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.btn_home{
+      background: linear-gradient(to bottom, rgb(78, 72, 233),rgb(67, 67, 71)) !important;
+      transition: all ease-in 0.5s;
+      margin: 10px;
+}
+.btn_home:hover{
+      background: linear-gradient(to bottom, rgb(193, 193, 207),rgb(7, 7, 107)) !important;
 }

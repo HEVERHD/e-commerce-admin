@@ -7,7 +7,7 @@ import baseURL from '../../config/baseUrl';
 import {notifyError, notifySuccess} from '../../utils/notifications'
 import {TextField, Button} from '@mui/material'
 
-import style from './Product.module.scss';
+import style from './Product.modules.css';
 
 
 const Product = ()=>{
@@ -84,29 +84,34 @@ const Product = ()=>{
       },[]);
 
       return (
-            <div>
-                  <img src={details.image}/>
+            <div className='container_gral_prod'>
+                  <div className='container_for_img'>
+                  <div className='img_txt'>
+                  <img className='img_prod' src={details.image}/>
                   {details.categories.map(item =>{
-                        return <h5 key={item.name}>{item.name}</h5>
+                        return <h5 className='txt_til' key={item.name}>Categoria:{item.name}</h5>
                   })}
-                  <h3>Sales : {details.sales}</h3>
-
-                  <form onSubmit={ handlerSubmit }>
-
-                        <select name='category' onChange={ handlerChange } defaultChecked='Hola'>
+                  <h3 className='txt_til'>Sales : {details.sales}</h3>
+                  </div>
+                  
+                  <form  className='form_prod' onSubmit={ handlerSubmit }>
+                        <label className='txt_til'>Categoria</label>
+                        <select className='select__' name='category'  onChange={ handlerChange } defaultChecked='Categoria'>
                               {categories.map(item =>{
                                     return <option key={item.id}>{item.name}</option>
                               })}
                         </select>
 
                         <TextField
-                              label='Title'
+                              className='textf_'
+                              label='Titulo'
                               name='title'
                               value = {details.title}
                               onChange={ handlerChange }
                         />
                         <TextField
-                              label='Price'
+                              className='textf_'
+                              label='Precio'
                               name='price'
                               type='number'
                               value = {details.price}
@@ -114,7 +119,8 @@ const Product = ()=>{
                         />
 
                         <TextField
-                              label='Stock'
+                              className='textf_'
+                              label='Cantidad'
                               name='stock'
                               type='number'
                               value = {details.stock}
@@ -122,6 +128,8 @@ const Product = ()=>{
                         />
                         
                         <textarea
+                              
+                              className='text_f_'
                               value = {details.description}
                               name='description'
                               onChange={ handlerChange }
@@ -129,7 +137,9 @@ const Product = ()=>{
 
                         <Button type='submit' variant="contained">Actualizar</Button>
                   </form>
-            </div>
+        
+                  </div>
+                   </div>
       )
 }
 export default Product;

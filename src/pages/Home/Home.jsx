@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { getAllProducts } from "../../redux/actions";
 import { useEffect } from "react";
-import style from './Home.module.scss';
+import './Home.modules.css';
 
 //COMPONENTES
 import Sidebar from "../../components/SideBar/Sidebar";
@@ -26,18 +26,18 @@ const Home = ()=>{
 
 
       return (
-            <div className={style.container}>
+            <div className='containerHome'>
                   <Sidebar/>
 
-                  <div className={style.productsContainer}>
+                  <div className='productsContainer'>
 
                         <h1>Total productos : {products.length} </h1>
-                        <div className={style.categories}>
-                              <h1>TITLE</h1>
-                              <h1>PRICE</h1>
-                              <h1>STOCK</h1>
-                              <h1>SALES</h1>
-                              <h1>DISCOUNT</h1>
+                        <div className='categories'>
+                              <h1 className='txt_categorias'>TITULO</h1>
+                              <h1 className='txt_categorias'>PRECIO</h1>
+                              <h1 className='txt_categorias'>CANTIDAD</h1>
+                              <h1 className='txt_categorias'>VENDIDO</h1>
+                              <h1 className='txt_categorias'>DESCUENTO</h1>
                         </div>
 
                         { products.result?.map( item =>{
