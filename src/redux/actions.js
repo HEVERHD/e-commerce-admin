@@ -5,6 +5,42 @@ import {notifyError, notifySuccess} from '../utils/notifications'
 export const LOGIN = 'LOGIN';
 export const GET_ALL_USERS = 'GET_ALL_USERS';
 export const GET_ALL_PRODUCTS = 'GET_ALL_PRODUCTS';
+export const UPDATE_USER = 'UPDATE_USER';
+export const DELETE_USER = 'DELETE_USER';
+
+export const updateUser = (id, userData, token) => {
+      return async dispatch => {
+            await baseURL.put(`admin/user/update/${id}`, {...userData}, {
+                  headers: {
+                        token
+                  }
+            })
+            .then(res=>{
+                  dispatch({
+                        type: UPDATE_USER,
+                        payload: res.data
+                  })
+            })
+            .catch(res => notifyError(res.response.data.error))
+      }
+}
+
+export const deleteUser = (id, token) => {
+      return async dispatch => {
+            await baseURL.delete(`admin/user/delete/${id}`, {
+                  headers: {
+                        token
+                  }
+            })
+            .then(res=>{
+                  dispatch({
+                        type: DELETE_USER,
+                        payload: res.data
+                  })
+            })
+            .catch(res => notifyError(res.response.data.error))
+      }
+}
 
 export const logIn =  (email, password, navigate) =>{
       return async dispatch => {

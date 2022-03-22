@@ -1,0 +1,72 @@
+.usersTable{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+
+    td,th{
+        border: 1px solid #dddddd;
+        border-color: rgb(165, 165, 165) #dddddd98 ;
+        text-align: left;
+        padding: 8px;
+        transition: .2s;
+    }
+
+    .selected{
+        transition:.2s;
+        &:hover{
+            background-color: #dddddd;
+            td{
+                border-color: white;
+            }
+        }
+    }
+
+    .options{
+        .edit, .erase{
+            border:0;
+            width: 50%;
+            color:white;
+            font-weight: bold;
+            background-color: transparent;
+            box-sizing: border-box;
+            cursor: pointer;
+            a{
+                color:white;
+                text-decoration: none;
+            }
+            span{
+                box-sizing: border-box;
+                padding: 7px;
+                border-radius: 5px;
+                font-size: 15px;
+                margin: auto;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    
+        .edit{
+            span{
+                background-color: rgb(30, 230, 30);
+            }
+        }
+    
+        .erase{
+            span{
+                background-color: rgb(255, 47, 47);
+            }
+        }
+    }
+
+    
+}
+
+.pag{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    button{
+        width: 100%;
+    }
+}
